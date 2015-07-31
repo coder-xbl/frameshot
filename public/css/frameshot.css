@@ -1,0 +1,391 @@
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* global styles */
+body {width:500px; min-width:480px; max-width:800px; margin: 0 auto; text-align:center; font:62.5% Arial, Verdana, Helvetica, sans-serif;}
+body h2 {  width:100%; height:50px; line-height:50px; font-size:3.5em; color:#666; }
+#video4shot {width:100%;}
+#video_wrap { width:100%; margin:0 auto;}
+
+/* video control */
+#video_control, #play_big, #canvas4shot  { display: none;}
+
+/* frame shot control */
+div#shot_control {width:100%; }
+#shot_control div, #shot_control button { width:45%; height:30px;  margin:10px 10px 0 10px; background:#ccc; text-align:right; font:1.3em bold;  float:left;}
+
+#shot_control div input { width:19%; height:15px; margin:5px 0; text-align:right;}
+#shot_control div span { width:10%; height:15px; margin:5px 3%; padding:0 3%; background:#aaa; cursor: pointer;}
+
+#shot_control button {
+margin:10px;
+text-align:center;
+color:#fff;
+background:#aaa;  
+font:1.8em bold Arial, Verdana, Helvetica, sans-serif;
+border-radius:15px; 
+-moz-border-radius:15px; /* Firefox 3.6 and earlier */ 
+cursor: pointer;
+}
+
+#shot_imgs { width:100%; cursor: pointer;}
+#shot_imgs li { width:100px; height:56px; border:#ccc 1px solid; float:left; margin:8px; background:#333;}
+
+#footer { height:50px; line-height:50px; clear:both; font-size:1em; color:#999; }
+
+
+/* video base styles */
+.ghinda-video-player {}
+.ghinda-video-play, .ghinda-volume-button {
+	cursor: pointer;
+}
+.ghinda-video-timer {
+	cursor: default;
+}
+
+
+/* Start of simpledark default theme */
+.ghinda-video-player.simpledark {
+	float: left;
+	position: relative;
+	padding: 10px;
+	border: 5px solid #61625d;
+
+	font-family: Arial, Helvetica, sans-serif;
+		
+	-moz-border-radius: 5px; /* FF1+ */
+	-webkit-border-radius: 5px; /* Saf3+, Chrome */
+	border-radius: 5px; /* Opera 10.5, IE 9 */
+	
+	background: #000000;
+	background-image: -moz-linear-gradient(top, #313131, #000000); /* FF3.6 */
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #313131),color-stop(1, #000000)); /* Saf4+, Chrome */
+	
+	box-shadow: inset 0 15px 35px #535353;
+}
+
+.ghinda-video-player.simpledark .ghinda-video-controls {
+	position: relative;
+	padding-top: 5px;
+	float: left;
+	clear: both;
+	width: 100%;
+	color: #fff;
+}
+
+.ghinda-video-player.simpledark .ghinda-video-play, 
+.ghinda-video-player.simpledark .ghinda-video-seek,
+.ghinda-video-player.simpledark .frameshot-seek, 
+.ghinda-video-player.simpledark .ghinda-volume-box, 
+.ghinda-video-timer,
+.ghinda-video-duration
+{
+	float: left;
+}
+
+/* play, pause */
+.ghinda-video-player.simpledark .ghinda-video-play {
+	display: block;
+	width: 22px;
+	height: 22px;
+	margin-right: 5px;
+	background: url(images/play-icon.png) no-repeat;	
+	
+	opacity: 0.7;
+	
+	-moz-transition: all 0.2s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.2s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out;  /* Opera */
+	transition: all 0.2s ease-in-out; 
+}
+
+.ghinda-video-player.simpledark .ghinda-paused-button {
+	background: url(images/pause-icon.png) no-repeat;
+}
+
+
+.ghinda-video-player.simpledark video {
+/* 	float: left;
+ */}
+
+
+.ghinda-video-player.simpledark .ghinda-video-play:hover {	
+    opacity: 1;
+}
+
+/* seek */
+.ghinda-video-player.simpledark .ghinda-video-seek, 
+.ghinda-video-player.simpledark .frameshot-seek 
+{
+	position:relative;		
+	width: 65%;
+	height: 10px;
+	margin: 7px;	
+	border: 1px solid #494949;
+
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #535353;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	box-shadow: inset 0 -3px 3px #333333;
+}
+
+.ghinda-video-player.simpledark .frameshot-seek { 
+/* 
+left:64px; 
+ */
+}
+
+.ghinda-video-player.simpledark .ghinda-video-seek {
+/* 
+ */
+display:none;
+}
+
+
+.ghinda-video-player.simpledark .ghinda-video-seek .ui-slider-handle, 
+.ghinda-video-player.simpledark .frameshot-seek .ui-slider-handle 
+{
+	width: 15px;
+	height: 15px;
+	border: 1px solid #333;
+	top: -4px;
+
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;	
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 -3px 3px #d5d5d5;	
+}
+
+.ghinda-video-player.simpledark .ghinda-video-seek .ui-slider-handle.ui-state-hover, 
+.ghinda-video-player.simpledark .frameshot-seek .ui-slider-handle.ui-state-hover 
+{
+	background: #fff;
+}
+
+.ghinda-video-player.simpledark .ghinda-video-seek .ui-slider-range, 
+.ghinda-video-player.simpledark .frameshot-seek .ui-slider-range 
+{
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #4cbae8;
+	background-image: -moz-linear-gradient(top, #4cbae8, #39a2ce);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #4cbae8),color-stop(1, #39a2ce));
+	
+	box-shadow: inset 0 -3px 3px #39a2ce;
+}
+
+
+/* timer */
+.ghinda-video-player.simpledark .ghinda-video-timer,
+.ghinda-video-player.simpledark .ghinda-video-duration
+ {
+	margin: 5px;
+	color: #999;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+/* volume */
+.ghinda-video-player.simpledark .ghinda-volume-box {
+	
+	position: absolute;
+	bottom: 3px;
+/* 	
+ */	
+	right: 0px;
+	
+	overflow: hidden;
+	width: 20px;
+	height: 30px;
+	color: #fff;
+	padding: 0px 10px;
+	
+	-moz-transition: all 0.1s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.2s ease-in-out;  /* Opera */
+	transition: all 0.1s ease-in-out; 
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-box:hover {	
+	height: 135px;
+	padding-top: 5px;
+}
+
+
+.ghinda-video-player.simpledark .ghinda-volume-box:hover .ghinda-volume-slider {
+	position: relative;
+	visibility: visible;
+	opacity: 1;
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-slider {	
+	position: relative;
+	height: 100px;
+	width: 7px;
+	left: 4px;
+	
+	visiblity: hidden;
+	opacity: 0;
+	
+	border: 1px solid #444;
+
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #535353;
+	background-image: -moz-linear-gradient(top, #535353, #333333);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #535353),color-stop(1, #333333));
+	
+	box-shadow: inset 0 3px 3px #333333;
+	
+	-moz-transition: all 0.1s ease-in-out; /* Firefox */
+	-webkit-transition: all 0.1s ease-in-out; /* Safari and Chrome */
+	-o-transition: all 0.1s ease-in-out;  /* Opera */
+	transition: all 0.1s ease-in-out; 
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-slider .ui-slider-handle {
+	width: 12px;
+	height: 12px;
+	left: -4px;
+	margin-bottom:-0.6em;
+	margin-left:0;
+	border: 1px solid #333;	
+
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	border-radius:10px;	
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 3px 3px #d5d5d5;	
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-slider .ui-slider-handle.ui-state-hover {
+	background: #fff;
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-slider .ui-slider-range {
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	
+	background: #e6e6e6;
+	background-image: -moz-linear-gradient(top, #e6e6e6, #d5d5d5);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #e6e6e6),color-stop(1, #d5d5d5));
+	
+	box-shadow: inset 0 3px 3px #d5d5d5;
+}
+
+/* volume button */
+
+.ghinda-video-player.simpledark .ghinda-volume-button {
+	position: absolute;
+	bottom: 0px;
+	display: block;
+	width: 22px;
+	height: 22px;
+	background: url(images/volume-full-icon.png) no-repeat;
+	text-indent: -9999px;
+	
+	opacity: 0.8;
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-button:hover {
+	opacity: 1;
+}
+
+.ghinda-video-player.simpledark .ghinda-volume-mute {
+	background: url(images/volume-mute-icon.png) no-repeat;
+}
+
+
+/* needed jquery ui styles
+ * using these, we don't depend on jQuery UI's stylsheet
+ */
+.ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	display: block;
+	margin-left:-0.6em;
+	cursor: default;
+	outline: none;
+}
+
+.ui-slider-range {
+	display:block;
+	width:100%;	
+	height:100%;
+	left:0;
+	bottom: 0;
+	border:0 none;
+	position:absolute;
+	z-index:1;
+}

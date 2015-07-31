@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>QUnit Test Suite: Sample Tests</title>
+	<link rel="stylesheet" href="qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="qunit/qunit.js"></script>
+	<script type="text/javascript" src="../lib/jquery-1.5.2.js"></script>
+	<script src="../lib/jquery-ui-1.8.2.custom.min.js"></script>	
+	<script src="../lib/jquery.simulate.js"></script>
+	<script type="text/javascript" src="../src/frameshot.js"></script>
+	<script type="text/javascript" src="test_frameshot.js"></script>
+ 
+ </head>
+<body>
+<h1 id="qunit-header">QUnit Test Suite: FrameShot</h1>
+<h2 id="qunit-banner"></h2>
+<div id="qunit-testrunner-toolbar"></div>
+<h2 id="qunit-userAgent"></h2>
+<ol id="qunit-tests"></ol>
+
+<div id="qunit-fixture">  	
+<!-- test markup begin -->
+	
+	<div id="video_wrap">		
+		<video controls="controls" width="" height="" id="video4shot">
+			<source src="" type='video/ogg; ' />
+			<source src="" type='video/mp4; ' />
+		</video>
+
+		<div id="play_big" class="player_big">
+			<a id="play_bigbtn" class="player-bigbtn" title="Upload/Play/Pause" >Play</a>
+			<span>Play</span>
+		</div>
+		
+		<div id="video_control">
+			<a id="play_toggle" class="player-button" title="Play/Pause" >Play</a>
+			<div id="progress" class="video-seek">
+				<div id="load_progress"></div>
+				<div id="play_progress" ></div>
+			</div>
+			<div id="timer">
+				<span id="current_time">00:00</span> / 
+				<span id="duration">00:00</span>
+			</div>
+			<div id="volume_box">
+				<div class="volume-slider"></div>
+				<a id="volume-button" title="Mute/Unmute" ></a>
+			</div>
+		</div>	
+	</div> 			<!-- video wrap end  -->	
+
+	<canvas id="canvas4shot" width="" height="">Your browser does not support canvas.</canvas>	
+	
+	<div id="shot_control">
+		<div>
+			<label for="start">Start Point: </label><span>-</span>
+			<input type="text" name="start" class="timepoint"  /><span>+</span>
+		</div>
+		<div>
+			<label for="end">End Point: </label><span>-</span>
+			<input type="text" name="end" class="timepoint" /><span>+</span>
+		</div>
+		<div>
+  		<label for="frames">Total Frames: </label><span>-</span>
+			<input type="text" name="frames" /><span>+</span>
+		</div>
+		<div>
+			<label for="interval">Frames Interval: </label><span>-</span>
+			<input type="text" name="interval" /><span>+</span>
+		</div>
+		
+		<button>SHOT FRAMES</button>
+		<button>SAVE FRAMES</button>
+	</div>
+
+	<ul id="shot_imgs">
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+		<li><img src="" width="100" height="56"/></li>
+	</ul>
+			
+<!-- test markup end -->
+</div>  	
+	
+</body>
+</html>
